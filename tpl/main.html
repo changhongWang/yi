@@ -1,0 +1,92 @@
+<!--开头导航模块-->
+<nav ng-include="'tpl/header.html'"></nav>
+
+<div class="container-fluid detail" ng-controller="mainCtrl">
+    <!--搜索框-->
+    <form action="" class="form-horizontal">
+        <div class="form-group has-feedback">
+            <div class="col-lg-12">
+                <input type="text" placeholder="搜索菜品名称和原料..." id="search_box" class="form-control" ng-model="dish_name_material">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+        </div>
+
+    </form>
+
+<!--
+    <ul class="pa list-unstyled">
+        <li ng-repeat="res in search_res">{{res.name}}</li>
+    </ul>
+-->
+
+
+
+    <!--列表-->
+    <div class="panel panel-default">
+        <ul class="list-group" ng-repeat="page in pageList">
+            <li class="list-group-item">
+                <img ng-src="img/{{page.img_sm}}" alt="" class="pull-left img-responsive">
+                <h4><a href="#/detail/{{page.did}}">{{page.name}}</a></h4>
+                <p>主要食料：{{page.material}}</p>
+                <hr>
+                <p>￥{{page.price}}</p>
+            </li>
+            <!--<li class="list-group-item">
+                <img src="img/p2679.jpg" alt="" class="pull-left img-responsive">
+                <h4>【桂香紫薯山药卷】</h4>
+                <p>主要食料：切片吐司、紫薯、铁棍山药、糖桂花、炼乳</p>
+                <hr>
+                <p>￥16.50</p>
+            </li>
+            <li class="list-group-item">
+                <img src="img/p8489.jpg" alt="" class="pull-left img-responsive">
+                <h4>【小米椒爆炒小公鸡】</h4>
+                <p>主要食料：三黄鸡、杭椒、干红椒、新鲜小米椒、麻椒、八角、香叶、葱、姜、生抽</p>
+                <hr>
+                <p>￥32.00</p>
+            </li>
+            <li class="list-group-item">
+                <img src="img/p7818.jpg" alt="" class="pull-left img-responsive">
+                <h4>【口袋饼】</h4>
+                <p>主要食料：面粉、黄瓜、香肠、热水、土豆、盐、醋、生抽、油</p>
+                <hr>
+                <p>￥6.50</p>
+            </li>
+            <li class="list-group-item">
+                <img src="img/p9138.jpg" alt="" class="pull-left img-responsive">
+                <h4>【橄榄油版酸奶蛋糕】</h4>
+                <p>主要食料：鸡蛋、玉米淀粉、绵白糖、白醋、低筋粉、橄榄油、酸奶</p>
+                <hr>
+                <p>￥32.00</p>
+            </li>-->
+        </ul>
+        <ul class="list-group" ng-repeat="res in search_res" ng-if="search_res_null">
+            <li class="list-group-item">
+                <h4>{{res.name}}</h4>
+            </li>
+        </ul>
+        <button ng-if="hasMore" type="button" class="btn btn-success btn-block" ng-click="refresh()" ng-disabled="isLoading">
+            <span ng-hide="isLoading">加载更多</span>
+            <img ng-show="isLoading" src="img/loading.gif" alt="" class="loading">
+        </button>
+        <div class="alert alert-danger" ng-if="!hasMore" ng-hide="search_res_null">已经没有更多数据可以加载了..</div>
+    </div>
+
+    <!--加载更多按钮-->
+
+
+    <!--
+
+    暂未实现功能 ： 按下加载更多后拉取数据库信息，若无更多则弹出警告框：没有更多数据了
+
+    -->
+
+
+
+
+
+
+
+</div>
+
+<nav ng-include="'tpl/footer.html'"></nav>

@@ -1,0 +1,56 @@
+<nav ng-include="'tpl/header.html'"></nav>
+<div ng-controller="homeCtrl" class="container-fluid detail">
+    <form action="" class="form-horizontal">
+        <div class="form-group has-feedback">
+            <div class="col-lg-12">
+                <input type="text" placeholder="搜索菜品名称和原料..." id="search_box" class="form-control" ng-model="dish_name_material">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <!--<div class="col-xs-3 home-menu">
+            <a href="#" class=" fresh-goods"></a>
+        </div>
+        <div class="col-xs-3 home-menu">
+            <a href="#" class="find_by_map"></a>
+        </div>
+        <div class="col-xs-3 home-menu">
+            <a href="#" class="recommend"></a>
+        </div>
+        <div class="col-xs-3 home-menu">
+            <a href="#" class="></a>
+        </div>-->
+        <div class="col-xs-12 text-center"><img src="img/temp.jpg" alt="老板说这一块空着。"></div>
+    </div>
+    <div ng-repeat="i in pageList">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row home-menu-row">
+                    <div class="col-xs-4">
+                        <img ng-src="img/{{i.img_sm}}" alt="" class="home-menu-img">
+                    </div>
+                    <div class="col-xs-6 home-menu-detail">
+                        <h4>福林厨房</h4>
+                        <h5>{{i.name}}</h5>
+                        <p>
+                            <span class="glyphicon glyphicon-star rest-rating"></span>
+                            <span class="glyphicon glyphicon-star rest-rating"></span>
+                            <span class="glyphicon glyphicon-star rest-rating"></span>
+                            <span class="glyphicon glyphicon-star rest-rating"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <br>
+                            <span>￥{{i.price}}</span>
+                        </p>
+                    </div>
+                    <div class="col-xs-2">
+                        <h5>2km/13min</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<nav ng-include="'tpl/footer.html'"></nav>

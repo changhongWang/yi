@@ -1,0 +1,196 @@
+.page{
+    transition:all .5s linear;
+
+}
+.header-brand{
+    background-image: url("../img/Yi_Logo.jpg");
+    background-position: -170px 0;
+    width: 135px;
+    border-radius: 10px;
+}
+.start-page{
+    background: #14afff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.start-page-title{
+    position: absolute;
+    left:10%;
+    top:50%;
+}
+.start-brand{
+    background-image: url("../img/Yi_Logo.jpg");
+    background-position: -15px -200px;
+    background-size: 300% 200%;
+    width:300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.loading{
+    width: 20px;
+    height: 20px;
+}
+#center{
+    position: absolute;
+    top:50%;
+    transform: translateY(-100%);
+}
+.detail{
+    margin: 60px 0 100px;
+}
+.home-menu{
+    height: 125px;
+    border:1px solid #000
+}
+.home-menu-img {
+    margin-left: 20px;
+}
+.content{
+    border:1px solid #999;
+    border-radius:5px 5px 0 0;
+    margin-top: -20px;
+    padding:0 20px
+}
+.detail-bottom{
+    border-radius: 0 0 5px 5px;
+    background-color: #eee;
+    border:1px solid #999;
+    border-top: 0;
+    height: 60px;
+}
+.book-btn{
+    margin:14px 10px 0 0;
+}
+li.bottom-item{
+    padding-top:5px;
+}
+li.bottom-item >a{
+    color:#555;
+    text-decoration: none;
+}
+li.bottom-item>a:hover{
+    color:#aaa;
+}
+.panel hr,.panel p{
+    margin: 10px;
+}
+.panel p{
+    margin-left: 130px;
+}
+.panel h4{
+    margin:0 0 5px 130px;
+}
+.pa{
+    position: absolute;
+    width: 97.5%;
+    background: pink;
+    z-index: 100;
+    border-radius:3px;
+}
+.pa>li{
+    height: 40px;
+    line-height: 40px;
+    font-size:16px;
+    border-bottom:1px solid #888;
+    padding-left: 10px;
+}
+.pa>li:last-child{
+    border-bottom:0;
+}
+.page.ng-leave {
+    left: 0;
+    opacity: 1;
+}
+/*要离开的元素动画结束时的样式*/
+.page.ng-leave.ng-leave-active {
+    left: -100%;
+    opacity: 0;
+}
+/*要进入的元素动画开始时的样式*/
+.page.ng-enter {
+    left: 100%;
+    opacity: 0;
+}
+/*要进入的元素动画结束时的样式*/
+.page.ng-enter.ng-enter-active {
+    left: 0;
+    opacity: 1;
+}
+/*临时的，需要删除*/
+.menu-overflow{
+    overflow: hidden;
+}
+.border-r{
+    border: 1px solid #14afff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: #ddd;
+}
+
+.rest-rating{
+    color:palevioletred;
+}
+.home-menu-detail{
+    margin-top:-12px;
+}
+.home-menu-row{
+    margin-bottom: 20px;
+}
+
+/*用户中心样式*/
+.user-center-top{
+    background: #14afff;
+    margin-top: -10px;
+}
+a.user-center-login{
+    text-decoration: none;
+    color:#eee;
+}
+span.user-center-login{
+    height:80px;
+    line-height:80px;
+}
+.user-center-img{
+    border-radius:150px;
+}
+.user-center-adv{
+    background: #fff;
+    padding:10px;
+    margin-top: 0;
+}
+.user-center-main{
+    background: #eee;
+}
+.user-center-cashAll{
+    background: #fff;
+    margin: 10px 0 0;
+
+}
+.user-center-cashAll h2{
+    margin:20px 0;
+}
+.user-center-cashAll+div{
+    border-left: 1px solid #ddd;
+}
+.user-center-favourite{
+    background: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 24px;
+
+}
+.user-center-membership-addr>div+div{
+    border-top: 1px solid #ddd;
+}
+.user-center-membership-addr{
+    margin-top:20px;
+}
+
+/*用户登录样式*/
+h3.user-login-title{
+    position: absolute;
+    left:50%;
+    transform: translateX(-60%);
+    margin: 10px;
+}

@@ -1,0 +1,13 @@
+<!--开头导航模块-->
+<nav ng-include="'tpl/header.html'"></nav>
+
+<div class="container-fluid detail" ng-controller="orderSuccessCtrl">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="alert alert-success">订餐成功！您的订单编号为：{{order_num}}。您可以在用户中心查看订单状态。</div>
+        </div>
+    </div>
+</div>
+
+
+<nav ng-include="'tpl/footer.html'"></nav>

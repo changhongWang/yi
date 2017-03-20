@@ -1,0 +1,28 @@
+<!--开头导航模块-->
+<nav ng-include="'tpl/header.html'"></nav>
+
+<div class="container-fluid detail">
+    <div class="panel panel-default" ng-controller="myOrderCtrl">
+        <div class="panel-heading">
+            <h3 class="text-center">我的订单</h3>
+        </div>
+        <table class="table" ng-repeat="list in orderList">
+            <tr>
+                <th>编号</th>
+                <th>菜品</th>
+                <th>下单时间</th>
+                <th>联系人</th>
+            </tr>
+            <tr>
+                <td>{{list.oid}}</td>
+                <td>
+                    <img ng-src="img/{{list.img_sm}}" alt="" class="img-thumbnail">
+                </td>
+                <td>{{list.order_time}}</td>
+                <td>{{list.user_name}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<nav ng-include="'tpl/footer.html'"></nav>
